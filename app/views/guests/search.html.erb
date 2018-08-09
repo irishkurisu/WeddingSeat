@@ -1,7 +1,7 @@
 <% if @results.any? %>
     <h2>Guests:</h2>
     <% @results.each do |guest| %>
-        <p><%= guest.last_name %>, <%= guest.first_name %></p>
+        <div><%= guest.last_name %>, <%= guest.first_name %>  <%= guest.table.name %></div>
     <%end%>
 <% else %>
     There were no results for that guests's name

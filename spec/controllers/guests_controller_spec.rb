@@ -21,13 +21,19 @@ RSpec.describe GuestsController, type: :controller do
 
     context "it has results" do
       before() do
-        Guest.create(last_name: "Johnson", first_name: "Bob")
-        Guest.create(last_name: "Jenkins", first_name: "Jimmy")
+        table3 = Table.create(name: "Table 3")
+        table10 = Table.create(name: "Table 10")
+        Guest.create(last_name: "Johnson", first_name: "Bob", table: table3)
+        Guest.create(last_name: "Jenkins", first_name: "Jimmy", table: table10)
       end
       subject { get :search, params: {last_name: "jenkins"} }
 
-      it 'should render the search template with the correct guests displayed' do
-        expect(subject.body).to match(/Jenkins, Jimmy/)
+      it 'should render the search template with the correct guests and tables displayed' do
+        expect(subject.body).to match(/Jenkins, Jimmy\s+Table 10/)
+      end
+
+      it 'should not display incorrect tables' do
+        expect(subject.body).not_to match(/Table 3/)
       end
 
       it 'should not display any guests who do not match the search term' do
