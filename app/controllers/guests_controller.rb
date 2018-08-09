@@ -9,6 +9,7 @@ class GuestsController < ApplicationController
   end
 
   def search
+    @results = Guest.where("last_name ilike ?", "#{params["last_name"].strip}%")
   end
 
   def welcome
