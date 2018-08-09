@@ -9,5 +9,5 @@ Rails.application.routes.draw do
 
   get 'welcome', to: 'guests#welcome', as: 'welcome'
 
-  root 'guests#welcome'
+  root 'guest#welcome'
 end
