@@ -2,7 +2,7 @@
 <h2>to the wedding of Sarah and Chris Cunningham</h2>
 
 <p>Please enter your last name to find your table</p>
-<%= form_tag("/users/search", method: "get") do %>
+<%= form_tag("#{search_guests_path}", method: "get") do %>
     <%= text_field_tag(:last_name) %>
     <%= submit_tag("Search") %>
 <% end %>

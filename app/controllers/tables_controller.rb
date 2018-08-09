@@ -1,4 +1,4 @@
-class TableController < ApplicationController
+class TablesController < ApplicationController
   def index
   end
 
