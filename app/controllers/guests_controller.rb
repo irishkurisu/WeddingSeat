@@ -3,6 +3,14 @@ class GuestsController < ApplicationController
   end
 
   def create
+    g = Guest.create(guest_params)
+    if g.valid?
+      flash[:success] = "Guest successfully added."
+    else
+      flash[:alert] = g.errors.full_messages.join('. ')
+    end
+
+    redirect_to new_guest_path
   end
 
   def destroy
@@ -13,5 +21,10 @@ class GuestsController < ApplicationController
   end
 
   def welcome
+  end
+
+  private
+  def guest_params
+    params.require(:guest).permit(:first_name, :last_name, :table_id)
   end
 end

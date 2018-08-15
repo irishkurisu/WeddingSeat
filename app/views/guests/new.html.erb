@@ -1,0 +1,6 @@
+<%= form_for :guests do |f| %>
+    First name: <%= f.text_field :first_name %><br />
+    Last name : <%= f.text_field :last_name %><br />
+    Table     : <%= f.collection_select :table_id, Table.order(:name),:id,:name%>
+    <%= f.submit %>
+<% end %>
