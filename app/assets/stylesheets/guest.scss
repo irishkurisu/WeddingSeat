@@ -1,23 +1,30 @@
 // Place all the styles related to the guest controller here.
 // They will automatically be included in application.scss.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-.result_name {
-  width: 50%;
-  alignment: left;
-}
+.results {
+  text-align: left;
+  .result_name {
+    padding-left: 0;
+    width: 40%;
+  }
 
-.map_button {
-  width: 25%;
-  alignment: left;
-  padding: 5px;
-  margin-left: 10px;
-  border-radius: 5px;
-  background-color: #a11935;
-  color: #fffde3;
-  text-decoration: none;
-}
+  .table_name {
+    width: 20%;
+    padding-left: 20px;
+  }
 
-.map_button:focus,
-.map_button:hover {
-  background-color: #7a182f;
+  .map_button {
+    width: 25%;
+    padding: 3px;
+    margin-left: 10px;
+    border-radius: 5px;
+    background-color: #871328;
+    color: #fffde3;
+    text-decoration: none;
+  }
+
+  .map_button:focus,
+  .map_button:hover {
+    background-color: #7a182f;
+  }
 }

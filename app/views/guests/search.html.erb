@@ -1,11 +1,13 @@
 <% if @results.any? %>
     <h2>Guests:</h2>
-    <% @results.each do |guest| %>
-        <div class="result_name"><%= guest.last_name %>, <%= guest.first_name %>  <%= guest.table.name %></div>
-        <% unless guest.table.map_url.blank? %>
-            <a class="map_button" href=<%= table_map_path(guest.table)%>>Table Location</a>
-        <% end %>
-    <%end%>
+    <div class="results">
+      <% @results.each do |guest| %>
+          <span class="result_name"><%= guest.last_name %>, <%= guest.first_name %></span><span class="table_name"><%= guest.table.name %></span>
+          <% unless guest.table.map_url.blank? %>
+              <a class="map_button" href=<%= table_map_path(guest.table)%>>Table Location</a>
+          <% end %>
+      <%end%>
+    </div>
 <% else %>
     There were no results for that guests's name
 <% end %>
