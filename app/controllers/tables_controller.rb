@@ -3,6 +3,7 @@ class TablesController < ApplicationController
   end
 
   def new
+    @table = Table.new
   end
 
   def create
