@@ -27,6 +27,6 @@ class TablesController < ApplicationController
 
   private
   def table_params
-    params.require(:table).permit(:name)
+    params.require(:table).permit(:name, :map_url)
   end
 end

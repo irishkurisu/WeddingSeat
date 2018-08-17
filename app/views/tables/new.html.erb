@@ -1,5 +1,6 @@
 <h1>Please add a table</h1>
 <%= form_for @table do |f| %>
-    Table name: <%= f.text_field :name %><br />
+    Table name: <%= f.text_field :name %><br/>
+    Map url: <% f.text_field :map_url %><br/>
     <%= f.submit %>
 <% end %>
