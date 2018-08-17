@@ -4,7 +4,7 @@ class GuestsController < ApplicationController
   end
 
   def create
-    g = Guest.where(last_name: guest_params[:last_name], first_name: guest_params[:first_name])
+    g = Guest.where(last_name: guest_params[:last_name], first_name: guest_params[:first_name]).first
     if g.nil?
       g = Guest.create(guest_params)
     else
