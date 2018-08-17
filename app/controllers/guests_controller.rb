@@ -4,7 +4,13 @@ class GuestsController < ApplicationController
   end
 
   def create
-    g = Guest.create(guest_params)
+    g = Guest.where(last_name: guest_params[:last_name], first_name: guest_params[:first_name])
+    if g.nil?
+      g = Guest.create(guest_params)
+    else
+      g.update(guest_params)
+    end
+
     if g.valid?
       flash[:success] = "Guest successfully added."
     else
