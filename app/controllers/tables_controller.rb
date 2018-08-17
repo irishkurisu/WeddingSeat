@@ -20,6 +20,10 @@ class TablesController < ApplicationController
   def destroy
   end
 
+  def map
+    @map_url = Table.find(params[:table_id]).map_url
+  end
+
   private
   def table_params
     params.require(:table).permit(:name)
