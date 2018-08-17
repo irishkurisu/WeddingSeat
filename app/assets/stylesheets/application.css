@@ -14,18 +14,25 @@
  *= require_self
  */
 
-.left-rail {
-    background-color: #7a182f;
-    align: left;
-    width: 20px;
+html, body {
+    height: 100%;
+    margin: 0;
 }
 
-.right-rail {
+.rail {
     background-color: #7a182f;
-    align: right;
-    width: 20px;
+    float: left;
+    width: 10%;
+    height: 100%;
 }
 
 .center {
+    float: left;
     background-color: #fefae3;
+    width: 80%;
+    height: 100%;
+}
+
+.center * {
+    padding-left: 10px
 }
