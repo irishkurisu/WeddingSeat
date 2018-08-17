@@ -7,11 +7,21 @@
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <link href='https://fonts.googleapis.com/css?family=Sofia' rel='stylesheet'>
   </head>
 
   <body>
     <div class="rail"></div>
-    <div class="center"><%= yield %></div>
+    <div class="center">
+      <div class="top">
+        <div class="banner"></div>
+        <div class="welcome">
+          <h1>Welcome</h1>
+          <h2>Please join Sarah and Chris on this special day.</h2>
+        </div>
+      </div>
+      <div><%= yield %></div>
+    </div>
     <div class="rail"></div>
   </body>
 </html>
