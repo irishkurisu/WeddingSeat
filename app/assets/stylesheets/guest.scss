@@ -3,12 +3,17 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 .results {
   text-align: left;
+  .result {
+    padding-bottom: 15px
+  }
   .result_name {
+    float: left;
     padding-left: 0;
     width: 40%;
   }
 
   .table_name {
+    float: left;
     width: 20%;
     padding-left: 20px;
   }

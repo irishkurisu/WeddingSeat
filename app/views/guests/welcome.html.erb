@@ -1,3 +1,4 @@
+<%= render 'shared/top_banner' %>
 <p>Please enter your last name to find your table</p>
 <%= form_tag("#{search_guests_path}", method: "get") do %>
     <%= text_field_tag(:last_name) %>
