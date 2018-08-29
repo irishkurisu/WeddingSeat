@@ -66,3 +66,34 @@ html, body {
 .center * {
     padding-left: 10px
 }
+
+input[type=text] {
+  width: 250px;
+}
+
+.return {
+  margin: auto;
+  width:50%;
+  padding-top: 15px;
+  text-align: center;
+  .button.search {
+    padding: 10px 15px 10px 15px;
+  }
+}
+
+.button,
+input[type=submit] {
+  width: 100px;
+  padding: 3px;
+  margin-left: 10px;
+  border-radius: 5px;
+  background-color: #871328;
+  color: #fffde3;
+  text-decoration: none;
+}
+
+.button:focus,
+.button:hover,
+input[type=submit]{
+  background-color: #7a182f;
+}

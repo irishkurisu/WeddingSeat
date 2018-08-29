@@ -5,7 +5,7 @@
           <div class="result">
             <div class="result_name"><%= guest.last_name %>, <%= guest.first_name %></div><div class="table_name"><%= guest.table.name %></div>
             <% unless guest.table.map_url.blank? %>
-                <a class="map_button" href=<%= table_map_path(guest.table)%>>Table Location</a>
+                <a class="map button" href=<%= table_map_path(guest.table)%>>Table Location</a>
             <% end %>
           </div>
       <%end%>
@@ -13,3 +13,5 @@
 <% else %>
     There were no results for that guests's name
 <% end %>
+
+<%= render 'shared/return_footer' %>
