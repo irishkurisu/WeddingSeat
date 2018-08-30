@@ -1,2 +1,9 @@
-<h1>Table#index</h1>
-<p>Find me in app/views/table/index.html.erb</p>
+<h1>Tables</h1>
+<% @tables.each do |table| %>
+    <h3><%= table.name %></h3>
+    <% table.guests.each do |guest| %>
+        <p><%= guest.last_name %>, <%= guest.first_name %></p>
+    <%end%>
+    <br>
+<%end%>
+
