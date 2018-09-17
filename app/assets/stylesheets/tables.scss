@@ -2,9 +2,15 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 .map {
-  width: 95%
+  width: 90%
 }
 
 .add-table {
   width: 120px;
+}
+
+.map-container {
+  h2 {
+    padding-bottom: 5px;
+  }
 }
