@@ -3,9 +3,11 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 .results {
   text-align: left;
+  margin-bottom: 20px;
   .result {
     padding-bottom: 15px;
     font-size: 22px;
+    margin-bottom: 5px;
   }
   .result_name {
     float: left;
